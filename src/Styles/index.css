@@ -1,0 +1,9 @@
+:root { /* Html Page Root*/
+    background-color: #344C64;
+    color: white;
+}
+* {
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+}

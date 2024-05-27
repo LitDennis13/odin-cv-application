@@ -1,0 +1,23 @@
+Things to add
+
+First Name
+Last Name
+E-Mail
+Phone
+Education
+    School Name
+    Field of Study
+    Start Date
+    End Date
+Work Experience
+    Company Name
+    Position Title
+    Main Responsibilities
+    Start Date
+    End Date
+
+0-3 Dark-Light
+0 Purple - #240750
+1 Grey-Blue: #344C64
+2 Grey-Blue-Light: #577B8D
+3 Dark-Aqua: #57A6A1
