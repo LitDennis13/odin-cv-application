@@ -1,19 +1,23 @@
 #enter-education {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80vw;
+    border-radius: 3rem;
+    padding: 2vw 4vw;
+    background-color: #577B8D;  
+}
+
+#required-education-section {
     display: grid;
     grid-template: 1fr 1fr 1fr 1.3vw / 1fr 1fr;
     row-gap: 3vh;
     column-gap: 1vw;
-    background-color: #577B8D;
-    border-radius: 3rem;
-    padding: 2vw 4vw;
-    width: 80vw;
 }
 
 #education-title {
     grid-area: 1 / 1 / 2 / 2;
     justify-self: start;
     font-size: 2.4vw;
-    margin-left: 1.2vw;
 }
 
 #enter-school-name, #enter-field-of-study, #enter-start-date, #enter-end-date {
@@ -57,4 +61,26 @@
     grid-area: 4 / 1 / 5 / 3;
     justify-self: center;
     font-size: 1.3vw;
+}
+
+#add-education-button {
+    background-color: #57A6A1;
+    color: white;
+    border: none;
+    border-radius: 5rem;
+    font-size: 2vw;
+    text-align: center;
+    height: 10vh;
+    width: 20%;
+    align-self: end;
+    transition: .5s background-color;
+}
+
+#add-education-button:hover {
+    background-color: #6100f1;
+    transition: .5s background-color;
+}
+#add-education-button:active {
+    background-color: #240750;
+    transition: .1s background-color;
 }
