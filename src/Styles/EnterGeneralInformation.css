@@ -13,7 +13,6 @@
     grid-area: 1 / 1 / 2 / 2;
     justify-self: start;
     font-size: 2.4vw;
-    margin-left: 1.2vw;
 }
 
 #enter-first-name, #enter-last-name, #enter-email, #enter-phone-number {
