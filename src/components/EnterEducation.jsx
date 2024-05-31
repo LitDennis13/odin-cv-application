@@ -1,42 +1,31 @@
+/* eslint-disable react/prop-types */
 import "../Styles/EnterEducation.css";
 
-function addExtraEducation() {
-    console.log("Hello, World!");
-}
+import EducationFormInfo from "./EducationFormInfo";
+
+const addEducationButtonHTML = 
+<button id="add-education-button" type="button">Add Education</button>;
 
 window.addEventListener("load", () => {    
     const addEducationButton = document.querySelector("#add-education-button");
+    const enterEducationSection = document.querySelector("#enter-education");
+
     
+    function addExtraEducation() {
+        console.log(enterEducationSection);
+    }
+
     addEducationButton.addEventListener("click", addExtraEducation);
 });
 
-
-function EnterEducation() {
+function EnterEducation({info, setInfo}) {
+    const education = [...info.education];
     return <div id="enter-education">
-        <div id="required-education-section">
-            <h2 id="education-title">Education</h2>
-            <div id="enter-school-name">
-                <label htmlFor="school-name-input"><p id="required">*</p>School Name: </label>
-                <input type="text" id="school-name-input" required/>
-            </div>
-
-            <div id="enter-field-of-study">
-                <label htmlFor="field-of-study-input"><p id="required">*</p>Field of Study: </label>
-                <input type="text" id="field-of-study-input" required/>
-            </div>
-
-            <div id="enter-start-date">
-                <label htmlFor="start-date-input"><p id="required">*</p>Start Date: </label>
-                <input type="date" id="start-date-input" required/>
-            </div>
-
-            <div id="enter-end-date">
-                <label htmlFor="end-date-input"><p id="required">*</p>End Date: </label>
-                <input type="date" id="end-date-input" required/>
-            </div>
-            <p id="required-text-E">Fields with <p id="required">*</p> are required</p>
-        </div>
-        <button id="add-education-button" type="button">Add Education</button>
+        {education.map((_, index) => {
+            return <EducationFormInfo key={index} id={index} allInfo={info} setAllInfo={setInfo}/>;
+        })}
+        
+        {addEducationButtonHTML}
     </div>
 }
 

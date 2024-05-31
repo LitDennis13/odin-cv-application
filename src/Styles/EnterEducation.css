@@ -7,10 +7,10 @@
     background-color: #577B8D;  
 }
 
-#required-education-section {
+#education-section {
     display: grid;
     grid-template: 1fr 1fr 1fr 1.3vw / 1fr 1fr;
-    row-gap: 3vh;
+    row-gap: 1vh;
     column-gap: 1vw;
 }
 
@@ -18,6 +18,8 @@
     grid-area: 1 / 1 / 2 / 2;
     justify-self: start;
     font-size: 2.4vw;
+    margin-bottom: 1vh;
+    
 }
 
 #enter-school-name, #enter-field-of-study, #enter-start-date, #enter-end-date {
@@ -61,6 +63,7 @@
     grid-area: 4 / 1 / 5 / 3;
     justify-self: center;
     font-size: 1.3vw;
+    margin-top: 5vh;
 }
 
 #add-education-button {
