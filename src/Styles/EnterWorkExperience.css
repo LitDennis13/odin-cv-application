@@ -9,9 +9,10 @@
 
 #work-experience-section {
     display: grid;
-    grid-template: 1fr 1fr 4fr 1fr 1.3vw / 1fr 1fr;
+    grid-template: 1fr 1fr 4fr 1fr 1.3vw 1fr / 1fr 1fr;
     row-gap: 1vh;
     column-gap: 1vw;
+    margin-bottom: 3vh;
 }
 
 #work-experience-title {
@@ -74,13 +75,34 @@
     justify-self: center;
 }
 
-#required-text-E {
+#required-text-WE {
     grid-area: 5 / 1 / 6 / 3;
     justify-self: center;
     font-size: 1.3vw;
 }
 
+#remove-button-WE {
+    grid-area: 6 / 1 / 7 / 2;
+    background-color: #e10909;
+    color: white;
+    border: none;
+    border-radius: 5rem;
+    font-size: 2vw;
+    text-align: center;
+    height: 6.5vh;
+    width: 30%;
+    align-self: end;
+    transition: .5s background-color;
+}
 
+#remove-button-WE:hover {
+    background-color: #ab0202;
+    transition: .5s background-color;
+}
+#remove-button-WE:active {
+    background-color: #840000;
+    transition: .1s background-color;
+}
 
 #add-work-experience-button {
     background-color: #57A6A1;
@@ -93,6 +115,7 @@
     width: 30%;
     align-self: end;
     transition: .5s background-color;
+    margin-bottom: -3vh;
 }
 
 #add-work-experience-button:hover {

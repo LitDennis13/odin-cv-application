@@ -2,6 +2,12 @@
 
 function WorkExperienceFormInfo({allInfo, setAllInfo, id}) {
 
+    function removeWorkExperience() {
+        let tempWorkExperience = [...allInfo.workExperience];
+        tempWorkExperience.splice(id, 1);
+        setAllInfo({...allInfo, workExperience: tempWorkExperience});
+    }
+    
     function handleCompanyName(newCompanyName) {
         let tempWorkExperience = [...allInfo.workExperience];
         tempWorkExperience[id].companyName = newCompanyName;
@@ -54,7 +60,8 @@ function WorkExperienceFormInfo({allInfo, setAllInfo, id}) {
         <label htmlFor="end-date-input"><p id="required">*</p>End Date: </label>
         <input type="date" id="end-date-input" value={allInfo.workExperience[id].endDate} onChange={(event) => {handleEndDate(event.target.value)}} required/>
     </div>
-    <div id="required-text-E">Fields with <p id="required">*</p> are required</div>
+    <div id="required-text-WE">Fields with <p id="required">*</p> are required</div>
+    <button type="button" id="remove-button-WE" onClick={removeWorkExperience}>Remove</button>
 </div>;
 }
 

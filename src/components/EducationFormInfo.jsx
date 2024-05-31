@@ -1,6 +1,14 @@
 /* eslint-disable react/prop-types */
 function EducationFormInfo({allInfo, setAllInfo, id}) {
 
+    function removeEducation() {
+        let tempEducation = [...allInfo.education];
+        tempEducation.splice(id, 1);
+        setAllInfo({...allInfo, education: tempEducation});
+    }
+
+    const educationRemoveButton = id !== 0 ? <button type="button" id="remove-button-E" onClick={removeEducation}>Remove</button> : <></>;
+
     function handleSchoolName(newSchoolName) {
         let tempEducation = [...allInfo.education];
         tempEducation[id].schoolName = newSchoolName;
@@ -44,6 +52,7 @@ function EducationFormInfo({allInfo, setAllInfo, id}) {
         <input type="date" id="end-date-input" value={allInfo.education[id].endDate} onChange={(event) => {handleEndDate(event.target.value)}} required/>
     </div>
     <div id="required-text-E">Fields with <p id="required">*</p> are required</div>
+    {educationRemoveButton}
 </div>;
 }
 
