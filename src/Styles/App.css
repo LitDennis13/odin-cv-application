@@ -11,7 +11,29 @@
     padding: 5vh 2vw;
 }
 
-#required {
-    color: red;
+#recommended {
+    color: gold;
     display: inline;
+}
+
+#submit-button {
+    background-color: #57A6A1;
+    color: white;
+    font-size: 2.2vw;
+    border: none;
+    border-radius: 5rem;
+    text-align: center;
+    height: 7vh;
+    width: 88vw;
+    transition: .5s background-color;
+}
+
+#submit-button:hover {
+    background-color: #6100f1;
+    transition: .5s background-color;
+}
+
+#submit-button:active {
+    background-color: #240750;
+    transition: .5s background-color;
 }

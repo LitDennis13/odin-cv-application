@@ -52,7 +52,7 @@
     justify-self: center;
 }
 
-#required-text-GI {
+#recommended-text-GI {
     grid-area: 4 / 1 / 5 / 3;
     justify-self: center;
     font-size: 1.3vw;

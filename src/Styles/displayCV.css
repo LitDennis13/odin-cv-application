@@ -1,0 +1,62 @@
+#display-cv {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#display-application {
+    background-color: #577B8D;
+    padding: 2vw 2vw;
+    width: 84vw;
+    border-radius: 2rem;
+}
+
+#cv-title {
+    font-size: 3vw;
+    background-color: inherit;
+}
+
+#display-general-information {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 2rem;
+    justify-content: center;
+}
+
+#display-general-information > p {
+    font-size: 2.2vw;
+}
+
+#display-education-title, #display-work-experience-title {
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
+
+#educationSpot, #workExperienceSpot {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 1vw;
+    margin-bottom: 2vh;
+}
+
+#edit-button {
+    background-color: #57A6A1;
+    color: white;
+    font-size: 2.2vw;
+    border: none;
+    border-radius: 5rem;
+    text-align: center;
+    height: 7vh;
+    width: 88vw;
+    transition: .5s background-color;
+}
+
+#edit-button:hover {
+    background-color: #6100f1;
+    transition: .5s background-color;
+}
+
+#edit-button:active {
+    background-color: #240750;
+    transition: .5s background-color;
+}

@@ -2,56 +2,78 @@ import './Styles/App.css'
 
 import {useState} from "react";
 
-import EnterGeneralInformation from './components/EnterGeneralInformation'
-import EnterEducation from './components/EnterEducation'
-import EnterWorkExperience from './components/EnterWorkExperience'
-
+import EditCV from "./components/EditCV";
+import DisplayCV from "./components/DisplayCV";
 
 function App() {
     let [clientInfo, setClientInfo] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
+        firstName: "FIRSTNAME",
+        lastName: "LASTNAME",
+        email: "EMAIL",
+        phone: "3062061066",
         education: [
             {
-                schoolName: "",
-                fieldOfStudy: "",
-                startDate: "",
-                endDate: ""
+                schoolName: "SCHOOLNAME",
+                fieldOfStudy: "FIELDOFSTUDY",
+                startDate: "2022-04-04",
+                endDate: "2023-05-05"
+            },
+            {
+                schoolName: "SCHOOLNAME",
+                fieldOfStudy: "FIELDOFSTUDY",
+                startDate: "2022-04-04",
+                endDate: "2023-05-05"
             }
         ],
         workExperience: [
             {
-                companyName: "",
-                positionTitle: "",
-                mainResponsibilities: "",
-                startDate: "",
-                endDate: "",
+                companyName: "COMPANYNAME",
+                positionTitle: "POSITIONTITLE",
+                mainResponsibilities: "MAINRESPONSIBILTIES",
+                startDate: "2032-04-04",
+                endDate: "2043-05-05"
+            },
+            {
+                companyName: "COMPANYNAME",
+                positionTitle: "POSITIONTITLE",
+                mainResponsibilities: "MAINRESPONSIBILTIES",
+                startDate: "2032-04-04",
+                endDate: "2043-05-05"
             }
         ]
     });
-    
+
     function handleInformationChange(newInfo) {
         setClientInfo(newInfo);
     }
 
-    return <form id="enter-information-form">
-    <h1 id="title">CV Application</h1>
-    <EnterGeneralInformation
-    info={clientInfo}
-    setInfo={handleInformationChange}
-    />
-    <EnterEducation
-    info={clientInfo}
-    setInfo={handleInformationChange}
-    />
-    <EnterWorkExperience
-    info={clientInfo}
-    setInfo={handleInformationChange}
-    />
-    <button id="submit-button" type="button">Test Submit</button>
-    </form>
+    let [screen, setScreen] = useState(true);
+
+    function submitCV() {
+        console.log(clientInfo);
+        setScreen(false);
+    }
+
+    function editCV() {
+        console.log(clientInfo);
+
+        setScreen(true);
+    }
+    return <>
+        {
+        screen ? 
+        <EditCV
+            clientInfo={clientInfo}
+            handleInformationChange={handleInformationChange}
+            submitCV={submitCV}
+        /> 
+        : 
+        <DisplayCV
+            clientInfo={clientInfo}
+            editCV={editCV}
+        />
+        }
+    </>;
 }
 
 export default App;

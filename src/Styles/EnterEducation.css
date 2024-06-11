@@ -60,7 +60,7 @@
     justify-self: center;
 }
 
-#required-text-E {
+#recommended-text-E {
     grid-area: 5 / 1 / 6 / 3;
     justify-self: center;
     font-size: 1.3vw;

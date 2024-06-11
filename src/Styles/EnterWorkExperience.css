@@ -75,7 +75,7 @@
     justify-self: center;
 }
 
-#required-text-WE {
+#recommended-text-WE {
     grid-area: 5 / 1 / 6 / 3;
     justify-self: center;
     font-size: 1.3vw;
